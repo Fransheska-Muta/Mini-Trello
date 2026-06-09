@@ -26,12 +26,28 @@ form.addEventListener("submit", (event) => {
    //Delete (cross icon)
    let span1 = document.createElement("span");
    span1.innerHTML = "\u00d7";
+   span1.classList.add("delete");
    newTask.appendChild(span1)   
 
-   newTask.addEventListener("click", function(event) {
-   if(event.target.tagName === "SPAN") {
-      event.target.parentElement.remove();
-   }
+   let span2 = document.createElement("span");
+   span2.innerHTML = "\u270E";
+   span2.classList.add("edit");
+   newTask.appendChild(span2);
+
+    // this function handles both of my span elements and based
+    // on the classes it executes the specific function
+    newTask.addEventListener("click", function(event) {
+    if (event.target.classList.contains("delete")) {
+        newTask.remove();
+    }
+
+    if (event.target.classList.contains("edit")) {
+        const currentText = newTask.childNodes[0].textContent;
+        const newText = prompt("Edit task:", currentText);
+
+        if (newText !== null && newText.trim() !== "") {
+            newTask.childNodes[0].textContent = newText;
+        }
+    }
 });
 }});
-
