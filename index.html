@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Trello</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="drag.js" defer></script>
+    <script src="todo.js" defer></script>
+</head>
+<body>
+    <div class="board">
+       <form id="todo-form">
+         <input type="text" placeholder="New Task" id="todo-input">
+         <button type="submit" id="todo-button">Add +</button>
+       </form>
+
+       <div class="lanes">
+        
+        <div class="swim-lane" id="todo-lane">
+            <h3 class="heading">TODO</h3>
+            <!-- <p class="task" draggable="true">Start my todo list</p>
+            <p class="task" draggable="true">Do sales calls</p>
+            <p class="task" draggable="true">Upload on trello</p> -->
+        </div>
+       
+        <div class="swim-lane">
+            <h3 class="heading">DOING</h3>
+            <!-- <p class="task" draggable="true">Calling tasks</p> -->
+        </div>
+    
+        <div class="swim-lane">
+            <h3 class="heading">DONE</h3>
+            <!-- <p class="task" draggable="true">Sales calls</p> -->
+        </div>
+
+    </div>
+    </div>
+</body>
+</html>
