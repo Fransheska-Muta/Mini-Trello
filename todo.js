@@ -9,6 +9,7 @@ form.addEventListener("submit", (event) => {
 
     event.preventDefault(); // so the screen doesnt reload when we submit
     const value = input.value;
+    const label = prompt("Pick a category (Church Work, Client Work, Studies):");
 
     if (!value) {
         alert("What task am I supposed to add?");
@@ -18,7 +19,7 @@ form.addEventListener("submit", (event) => {
 
     newTask.classList.add("task");
     newTask.setAttribute("draggable", "true");
-    newTask.innerText = value;
+    newTask.innerText = `[${label}] ${value}`;
 
     //delete button
     let span1 = document.createElement("span");
@@ -34,7 +35,7 @@ form.addEventListener("submit", (event) => {
 
     //clock button 
     let span3 = document.createElement("span");
-    span3.innerHTML = "\u23F0";
+    span3.innerHTML = "\u23F1";
     span3.classList.add("clock");
     newTask.appendChild(span3);
 
@@ -91,9 +92,14 @@ function addTaskEvents() {
                 
             }
        
-        if (event.target.classList.contains("clock")) {
+            if (event.target.classList.contains("clock")) {
             const time = prompt("set the due time:");
-        }  
+            }  
+           
+            if(event.target.classList.contains("task")) {
+                task.classList.toggle("checked")
+
+            }
         });
     });
 }

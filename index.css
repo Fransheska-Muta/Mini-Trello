@@ -16,6 +16,11 @@
     overflow: hidden;
 }
 
+.checked{
+    text-decoration: line-through;
+    cursor: pointer;
+}
+
 #todo-form{
     align-content: center;
     /* border: 2px solid yellow; */
