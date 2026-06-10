@@ -22,6 +22,8 @@
     height: 10%;
     width: 60%;
     margin: auto;
+    margin-bottom: 5%;
+    margin-top: 2%;
 }
 
 #todo-input{
@@ -47,6 +49,7 @@
     padding: 24px 32px;
     height: 100%;
     color: black;
+    overflow-x: scroll;
 }
 
 .heading{
@@ -88,11 +91,12 @@ span{
   /* border: 2px solid red; */
   font-size: 20px;
   cursor: pointer;
+  /* display: grid; */
 }
 
 p{
-  /* border: 2px solid red; */
-  display: flex;
+  /* border: 2px solid red;  */
+   display: flex;
   justify-content: space-between;
 }
 
@@ -105,6 +109,15 @@ p{
 p{
   /* border: 2px solid red; */
   display: flex;
+}
+}
+
+@media screen and (max-width: 853px) {
+    #todo-button{
+    padding: 0;
+    width: 20%;
+    font-weight: lighter;
+    font-size: small;
 }
 }
 
@@ -125,15 +138,12 @@ p{
     /* border: 2px solid yellow; */
     background: rgb(212, 210, 210);
     color: black;
-    width: 130%;
-    min-height: 40%;
+    width: 50%;
 }
 .lanes{
-    /* border: 2px solid yellow; */
-    display: grid;
-    padding: 0px 0px;
     height: 100%;
     color: black;
+    gap: 20px
 }
 .heading{
     font-size: large;
@@ -144,6 +154,24 @@ p{
     #todo-button{
     padding: 0.4%;
     width: 18%;
+    font-weight: lighter;
+    font-size: small;
+}
+}
+
+@media screen and (max-width: 360px) {
+    #todo-button{
+    padding: 0;
+    width: 20%;
+    font-weight: lighter;
+    font-size: small;
+}
+}
+
+@media screen and (max-width: 320px) {
+    #todo-button{
+    padding: 0;
+    width: 20%;
     font-weight: lighter;
     font-size: small;
 }
